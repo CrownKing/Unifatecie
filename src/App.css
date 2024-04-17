@@ -141,6 +141,10 @@ img{
   height: auto;
   overflow: auto;
   transition: opacity 3.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .divListaCursos.hidden {
   opacity: 0;
@@ -256,6 +260,7 @@ img{
   }
 }
 .titulolista{
+  cursor: pointer;
   background-color: var(--color-primary);
   padding: 1.5em;
   border-radius: 15px 15px 0px 0px;
@@ -296,7 +301,9 @@ h4{
 }
 .corpoLista{
   background-color: #F2F2F2;
-    border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  width: 86%;
+  margin-bottom: 8px;
 }
 .mecContainer{
   background-color: #000000;
@@ -428,29 +435,46 @@ h4{
   background-size: cover;
 }
 
-
+form{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
 .formsInputs {
-  position: absolute;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     display: flex;
     padding-top: 10px;
     margin-left: 20px;
+    justify-content: center;
 }
 .formsInputs input{
-  width: 28%;
+  width: 100%;
   height: 24px;
   margin-top: 8px;
   border: solid 2px var(--color-primary);
   color: black;
   font-weight: 500;
-
+  max-width: 444px;
+  align-self: center;
+}
+.formsInputs textarea{
+  width: 100%;
+  height: 150px;
+  margin-top: 8px;
+  align-self: center;
+  border: solid 2px var(--color-primary);
+  color: black;
+  font-weight: 500;
+  max-width: 444px;
+  resize: none;
+  font-family: inherit;
 }
 
-.formsInputs span{
+.formsInputs label{
   color: #000000;
   font-weight: bold;
-  text-align: start;
+  text-align: center;
 
 }
 
@@ -471,10 +495,11 @@ h4{
   width: 29%;
   height: 40px;
   background: var(--color-primary);
-  /* font-weight: 500; */
   border: none;
   margin-top: 10px;
   border-radius: 8px;
+  align-self: center;
+  min-width: 84px;
 
 }
 @media screen and (max-width: 768px) {
