@@ -391,9 +391,12 @@ function Home() {
                                 >
                                   <b>
                                     Teologia{" "}
-                                    <span className="textHighlight">
+                                    <span className="textHighlight" onClick={() =>
+                                      handleClick("teologia")
+                                    } >
                                       3 Anos
-                                    </span>{" "}
+                                    </span>
+                                    
                                     <FontAwesomeIcon icon={faCircleInfo} />
                                   </b>
                                 </a>
@@ -402,8 +405,12 @@ function Home() {
                               <p className="botao">
                                 <a
                                   target="_blank"
-                                  href="https://unifatecie.estudecombolsa.com/pesquisa_cursos/bacharelado/teologia"
                                   className="btn btn-lista"
+                                  onClick={() =>
+                                    handleClick(
+                                      "bacharelado/teologia"
+                                    )
+                                  }
                                 >
                                   Saiba mais sobre o curso{" "}
                                   <i
